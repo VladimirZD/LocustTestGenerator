@@ -1,0 +1,14 @@
+{
+    "imports":"from locust import HttpLocust, TaskSet, task\nfrom locust.clients import HttpSession\nfrom requests_ntlm import HttpNtlmAuth"
+    ,"test_class":"\n\n\nclass LoadTests(TaskSet):"
+    ,"test_template":"\t@task(<TASK_WEIGHT>)\n\tdef <TASK_NAME>(self):\n\t\tauth=HttpNtlmAuth('<USER>','<PASSWORD>')\n\t\tself.client.get('<URL>',name='<GROUP_NAME>',auth=auth)"
+    ,"test_users":[
+            {"username":"test1", "password":"test1;"}
+            ,{"username":"test2", "password":"test1;"}
+            ,{"username":"test11", "password":"test1;"}
+            ,{"username":"test22", "password":"test1;"}
+            ,{"username":"test55", "password":"test1;"}
+            ,{"username":"test66", "password":"test1;"}
+        ]
+}
+    
