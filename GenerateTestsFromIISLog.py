@@ -177,8 +177,3 @@ if __name__ == '__main__':
   process_log_files()
   logEvent('All Done')
 
-#python .\GenerateTestsFromIISLog.py --log_file=D:\Temp\sUME\iis_logs\u_ex181219.log --logs_folder=D:\Temp\sUME\iis_logs
-#http://rdrazvoj//centrix2rhetos/rest/EvidencijaPismena/PismenoBrowse/?skip=40&top=21&sort=DatumNastankaAktaIliPrimitkaPismena%20desc&genericfilter=%5B%7B%22Filter%22%3A%22EvidencijaPismena.PismenoBrowseSearchHS%22%2C%20Value%3A%20%7B%20%20%7D%7D%2C%7B%22Filter%22%3A%22EvidencijaPismena.PismenoCustomFieldsSearch%22%2C%20Value%3A%20%7B%20%20%7D%7D%2C%7B%22Filter%22%3A%22EvidencijaPismena.PismenoBrowseSearch%22%2C%20Value%3A%20%7B%20%22Active%22%3A%22True%22%20%7D%7D%2C%7B%22Filter%22%3A%22EvidencijaPismena.PismenoOcrFieldsSearch%22%2C%20Value%3A%20%7B%20%20%7D%7D%2C%7B%22Filter%22%3A%22Common.RowPermissionsReadItems%22%7D%5D
-
-
-#/Centrix2/Centrix2DMS/ResourceHelper/Download?relativeFilePath=/reference/html5_editor.css'
