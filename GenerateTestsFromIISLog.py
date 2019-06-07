@@ -40,10 +40,13 @@ def get_files_in_folder(path,extensions):
   return files
 
 def get_test_user(users,username):
-  #returns user or random one if username =='random'
-  key = username if username!='random' else (random.choice(list(users.keys())))
+  #returns user or random one if user doesn't exist
+  if username in users:
+    key=username
+  else:
+    key = (random.choice(list(users.keys())))
   return key,users[key]
-  
+
 def fill_test_users(userData):
   users=dict()
   for user in userData:
@@ -75,7 +78,8 @@ def generate_tests(requests):
         group_name = url
         url = url+'?'+escape_string(item[1]['query_param'])
         weight = str(item[1]['count'])
-        user,password =get_test_user(test_users,'random')
+        username =  item[1]['username']
+        user,password =get_test_user(test_users,username)
         task_name='Test%s' %(str(i))
         task =task_template.replace('<TASK_WEIGHT>',weight).replace('<URL>',url).replace('<TASK_NAME>',task_name).replace('<GROUP_NAME>',group_name).replace('<USER>',user).replace('<PASSWORD>',password)
         print (task,file=destination)
