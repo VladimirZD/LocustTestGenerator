@@ -157,7 +157,7 @@ if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   parser.add_argument('--site_name',  type=str, required=True, help='Folder to process, all log files in folder will be processed, subfolders ignored')
   parser.add_argument('--logs_folder',  type=str, required=False, help='Folder to process, all log files in folder will be processed, subfolders ignored')
-  parser.add_argument('--cutoff',  type=int, choices=range(1, 100), required=True, help='When generating tests after creating tests for specified %% of requests process will stop')
+  parser.add_argument('--cutoff',  type=int, choices=range(1, 101), required=True, help='When generating tests after creating tests for specified %% of requests process will stop')
 
   args = parser.parse_args()
   
