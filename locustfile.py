@@ -14,7 +14,7 @@ class PerfTestTasks(TaskSet):
     }
   
 class WebsiteUser(HttpLocust):
-    locust.stats.CSV_STATS_INTERVAL_SEC = 600
+    locust.stats.CSV_STATS_INTERVAL_SEC = 30 
     task_set = PerfTestTasks
     min_wait = 0.5*1000
-    max_wait = 12*1000
+    max_wait = 30*1000
